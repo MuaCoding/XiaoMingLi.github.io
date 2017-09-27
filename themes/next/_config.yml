@@ -42,7 +42,7 @@ menu:
   #about: /about
   archives: /archives
   tags: /tags
-  search: /search
+  #search: /search
   #sitemap: /sitemap.xml
   #commonweal: /404.html
 
@@ -101,7 +101,7 @@ font:
   # Fallback to `global` font settings.
   headings:
     external: true
-    family:
+    family: Roboto Slab
 
   # Font settings for posts
   # Fallback to `global` font settings.
@@ -115,13 +115,13 @@ font:
   logo:
     external: true
     family:
-    size:
+    size: 24
 
   # Font settings for <code> and code blocks.
   codes:
     external: true
     family:
-    size:
+    size: 15
 
 
 
@@ -449,7 +449,7 @@ algolia_search:
 
 # Local search
 local_search:
-  enable: false
+  enable: true
 
 # External URL with BASE64 encrypt & decrypt
 # Usage: {% exturl text url "title" %}
