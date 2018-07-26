@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    
+    <title>Cookie操作 | Spring Breeze Cat | Quick notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="前端,Cookie">
+    <link rel="shortcut icon" href="/">
+    <link rel="stylesheet" href="/css/third-party/swipebox.min.css?v=1.3.2">
+    <link rel="stylesheet" href="/css/style.css?v=1.3.2">
+    
+    <script type="text/javascript">
+        // Data Center
+        var DC = {
+            reward:	true,
+            lv: JSON.parse('{"enable":true,"app_id":"yyhDdCtcKJTKUWxpG5zsaMwO-gzGzoHsz","app_key":"HSAWkIphe4jYSyF7khd4Yw2J","icon":true}'),
+            v: JSON.parse('{"enable":false,"appid":null,"appkey":null,"notify":true,"verify":true,"placeholder":"give me some sugers plz...","avatar":"wavatar"}'),
+            g: JSON.parse('{"enable":false,"lazy":true,"owner":"https://github.com/XiaoMingLi","repo":"gitment","oauth":{"client_id":null,"client_secret":null},"perPage":10}'),
+            d: JSON.parse('{"app_id":null}')
+        };
+    </script>
+    <script type="text/javascript">
+        window.lazyScripts=[];
+    </script>
+    
+</head>
+
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      
+      <img src="/img/brand.jpg" class="brand-bg">
+      
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">春风猫儿</h5>
+          <a href="mailto:1165406082@qq.com" title="1165406082@qq.com" class="mail">
+            
+              <span>1</span>
+            
+              <span>1</span>
+            
+              <span>6</span>
+            
+              <span>5</span>
+            
+              <span>4</span>
+            
+              <span>0</span>
+            
+              <span>6</span>
+            
+              <span>0</span>
+            
+              <span>8</span>
+            
+              <span>2</span>
+            
+              <span>@</span>
+            
+              <span>q</span>
+            
+              <span>q</span>
+            
+              <span>.</span>
+            
+              <span>c</span>
+            
+              <span>o</span>
+            
+              <span>m</span>
+            
+          </a>
+        </hgroup>
+        
+        <ul class="menu-link">
+          
+              <li>
+                <a href="https://github.com/XiaoMingLi" target="_blank">
+                  <i class="icon icon-lg icon-github"></i>
+                </a>
+              </li>
+            
+        </ul>
+        
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                HOME
+              </a>
+            </li>
+        
+            <li class="">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                CATEGORIES
+              </a>
+            </li>
+        
+            <li class="">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                TAGS
+              </a>
+            </li>
+        
+            <li class="">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                ARCHIVES
+              </a>
+            </li>
+        
+            <li class="">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-plus-square"></i>
+                CUSTOM
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row clearfix">
+        <a href="javascript:;" class="header-icon pull-left waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">
+            <span>Cookie操作</span>
+            
+        </div>
+        
+        <a href="javascript:;" id="site_search_btn" class="header-icon pull-right waves-effect waves-circle waves-light">
+            <i class="icon icon-lg icon-search"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+    <img src="/img/banner.jpg" class="header-bg">
+    <div class="container fade-scale">
+        <h1 class="title">Cookie操作</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-04-15T01:56:12.000Z" itemprop="datePublished" class="page-time">
+  2017-04-15
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端/">前端</a></li></ul>
+
+            
+        </h5>
+        
+    </div>
+    
+
+</header>
+
+<div id="site_search">
+    <div class="search-title clearfix">
+        <span class="pull-left">
+          <i class="icon icon-lg icon-search"></i>
+        </span>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." class="form-control pull-left"/>
+        <a href="javascript:;" class="close pull-right waves-effect waves-circle waves-light">
+          <i class="icon icon-lg icon-close"></i>
+        </a>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+
+
+<div class="container body-wrap">
+    <article id="post-cookie"
+  class="post-article article-type-post" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">Cookie操作</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-04-15 09:56:12" datetime="2017-04-15T01:56:12.000Z"  itemprop="datePublished">2017-04-15</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端/">前端</a></li></ul>
+
+
+
+            
+	<span id="/2017/04/15/cookie/" class="leancloud_visitors" data-flag-title="Cookie操作" title="Cookie操作">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+            
+
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            
+            <p>在PC项目实战中，需要进行对站点的选择，将用户选择的站点保存在Cookie当中，设置cookie时一直成功。</p>
+<p>下面来说重点！直接上代码</p>
+<h5 id="保存Cookie"><a href="#保存Cookie" class="headerlink" title="保存Cookie"></a>保存Cookie</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">//参数 name: 自定义Cookie名字  value：给Cookie设置值  expired: 设置Cookie保存多长时间  path: 将Cookie保存的位置（根据项目的文件目录，asp.net默认为/，就是根目录）  domain: 表示的是cookie所在的域，默认为请求的地址，如网址为www.cookie.com/cookie/cookie.aspx，那么domain默认为www.test.com</span><br><span class="line"></span><br><span class="line">function setCookie(name, value, expired, path, domain) &#123;</span><br><span class="line">  var d = new Date();</span><br><span class="line">  d.setTime(d.getTime() + (expired * 24 * 60 * 60 * 1000));</span><br><span class="line">  var expires = &quot;expires=&quot; + d.toUTCString();</span><br><span class="line">  document.cookie = name + &quot;=&quot; + value + &quot;; &quot; + expires + &quot;;path=/;domain=&quot; + location.hostname;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h5 id="获取Cookie"><a href="#获取Cookie" class="headerlink" title="获取Cookie"></a>获取Cookie</h5><p>参数 name : 自定义Cookie名字<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function getCookie(objName) &#123;//获取指定名称的cookie的值 </span><br><span class="line">  var name = objName + &quot;=&quot;;</span><br><span class="line">  var value = document.cookie.split(&apos;;&apos;);</span><br><span class="line">  for (var i = 0; i &lt; value.length; i++) &#123;</span><br><span class="line">    var key = value[i];</span><br><span class="line">    while (key.charAt(0) == &apos; &apos;) key = key.substring(1);</span><br><span class="line">    if (key.indexOf(name) != -1) return key.substring(name.length, key.length);</span><br><span class="line">  &#125;</span><br><span class="line">  return &quot;&quot;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<h5 id="删除Cookie"><a href="#删除Cookie" class="headerlink" title="删除Cookie"></a>删除Cookie</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function delCookie(name) &#123;//为了删除指定名称的cookie，可以将其过期时间设定为一个过去的时间，或者将Cookie值设置为空 </span><br><span class="line">  setCookie(name, &quot;&quot;, -1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>好了，Cookie的基本的方法基本就是这样。当然在项目中运用这些方法之前，我也是踩了许多坑，比如，保存不成功，在做登陆的时候，获取Cookie值时，就遇到登陆后返回的token值保存在浏览器，获取保存在浏览器的token值时，值发生变化。好了，去搬砖了。</p>
+
+        </div>
+        
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2018-07-26T07:37:41.087Z" itemprop="dateUpdated">2018-07-26 15:37:41</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2017/04/15/cookie/" target="_blank" rel="external">https://xiaomingli.github.io/2017/04/15/cookie/</a>
+        
+    </div>
+    <footer>
+        <a href="https://xiaomingli.github.io">
+            <img src="/img/avatar.jpg" alt="春风猫儿">
+            春风猫儿
+        </a>
+    </footer>
+</blockquote>
+
+        
+            <div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+            
+        
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cookie/">Cookie</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+
+            <div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://xiaomingli.github.io/2017/04/15/cookie/&title=《Cookie操作》 — Spring Breeze Cat&pic=https://xiaomingli.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://xiaomingli.github.io/2017/04/15/cookie/&title=《Cookie操作》 — Spring Breeze Cat&source=在PC项目实战中，需要进行对站点的选择，将用户选择的站点保存在Cookie当中，设置cookie时一直成功。
+下面来说重点！直接上代码
+保存Cookie1..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+        </div>
+        
+            
+
+
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="prev">
+      <a href="/2017/09/27/create-webapp-problems-encountered/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">webapp实现出现的滚动问题</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="next">
+      <a href="/2017/03/15/hello/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Nagging</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+    
+</article>
+
+    <div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        我们一起来让这个世界有趣一点
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+    </div>
+</div>
+
+    
+</div>
+
+        <footer class="footer">
+    
+    <div class="top">
+        
+    </div>
+    
+    <div class="bottom">
+        <p>
+            <span>
+                春风猫儿 &copy; 2017 - 2018
+            </span>
+        		
+           	
+            
+            
+            
+            
+
+            
+                
+
+            
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://xiaomingli.github.io/2017/04/15/cookie/&title=《Cookie操作》 — Spring Breeze Cat&pic=https://xiaomingli.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://xiaomingli.github.io/2017/04/15/cookie/&title=《Cookie操作》 — Spring Breeze Cat&source=在PC项目实战中，需要进行对站点的选择，将用户选择的站点保存在Cookie当中，设置cookie时一直成功。
+下面来说重点！直接上代码
+保存Cookie1..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACNElEQVR42u3awW6EMAxFUf7/p+m20pRwn81UwrlZjSiEHBauHec48Dg/xtVfr+5Pnzq+MWTIkPFaxrkcnWX9vv75m8xM1iZDhox9GFcRbP36deisfYL1ey+vy5AhQ8byHjJIaE7fK0OGDBk8gKZUXsTKkCFDRlrEdhLBWuL4lVpchgwZL2TwXff///2V/oYMGTJexTjDkc5TW1a8KhkyZIxm8NfwhKyWXJKi+mY9MmTIGMogU/OjEh02X8MfV2TIkDGasQ6RafOgE7LTJsHl/w0ZMmQMZaRFaS1o1jb1WjuIMmTIGMHgxyCeKll5IhikqjJkyNiYUdsa40VvCovLVxkyZIxj8Os8pKYHLMhKbgKuDBkyhjJ4MYkmbW+ixZtxMmTI2ICRHuHiQZN/jrQVcdnZkCFDxjhGLV1LQ2ct7YsbpTJkyNiM0QHU5n+gUSpDhozRjLQEXad66UcJQip5SoYMGUMZ6UEuUrimrYK0OYEqchkyZAxi8ADKj010jnl1yl0ZMmRMZXQaivzgVxqmeYtUhgwZuzHigw7t+3kQv5lBhgwZGzBqL6stIi2b0UeXIUPGUMYZDoLnbYC0nVCsv2XIkPFyRhrm0klJ4Uqeeixky5Ah47UMvkHGy9ROO6F2NE2GDBk7MHjgq23uk2QxDf0yZMiQEbQPw3SwGFLJppsMGTJkLBfaCaw8WXwsNZQhQ8YLGelm/fqVabnbL6RlyJAxm5EeceABt7aVxsOxDBkyNmD8AC3+0T8IBsS4AAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+    
+    <!-- main-js -->
+<script type="text/javascript" src="//cdn.bootcss.com/jquery/2.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/plugins/fastclick.js?v=1.3.2"></script>
+<script type="text/javascript" src="/js/plugins/ios-orientationchange-fix.js?v=1.3.2"></script>
+<script type="text/javascript" src="/js/plugins/jquery.swipebox.min.js?v=1.3.2"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script type="text/javascript" src="/js/method.js?v=1.3.2"></script>
+<script type="text/javascript" src="/js/blog.js?v=1.3.2"></script>
+
+<!-- third-party -->
+<script type="text/javascript">
+;( function( $ ) {
+
+	$( '.swipebox' ).swipebox({
+		hideCloseButtonOnMobile: true
+	});
+
+} )( jQuery );
+</script>
+
+
+
+
+
+
+<script type="text/javascript" src="/js/plugins/local_search.js?v=1.3.2"></script>
+<script type="text/javascript">
+	var search_path = "search.xml";
+	if (search_path.length === 0) {
+		search_path = "search.xml";
+	}
+	var path = "/" + search_path;
+	searchFunc(path, "local-search-input", "local-search-result");
+</script>
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+    
+    
+
+
+
+<script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script type="text/javascript" src="/js/plugins/leancloud_visitors.js?v=1.3.2"></script>
+
+
+
+    <!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+
+
+    
+</body>
+</html>
