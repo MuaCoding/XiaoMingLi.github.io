@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     
     
-    <title>Categories: 前端 | Spring Breeze Cat | Quick notes</title>
+    <title>git | Spring Breeze Cat | Quick notes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="keywords" content="undefined">
+    <meta name="keywords" content="前端,git">
     <link rel="shortcut icon" href="/">
     <link rel="stylesheet" href="/css/third-party/swipebox.min.css?v=1.3.2">
     <link rel="stylesheet" href="/css/style.css?v=1.3.2">
@@ -15,7 +15,7 @@
     <script type="text/javascript">
         // Data Center
         var DC = {
-            reward:	false,
+            reward:	true,
             lv: JSON.parse('{"enable":true,"app_id":"yyhDdCtcKJTKUWxpG5zsaMwO-gzGzoHsz","app_key":"HSAWkIphe4jYSyF7khd4Yw2J","icon":true}'),
             v: JSON.parse('{"enable":false,"appid":null,"appkey":null,"notify":true,"verify":true,"placeholder":"give me some sugers plz...","avatar":"wavatar"}'),
             g: JSON.parse('{"enable":false,"lazy":true,"owner":"https://github.com/XiaoMingLi","repo":"gitment","oauth":{"client_id":null,"client_secret":null},"perPage":10}'),
@@ -32,7 +32,7 @@
 <body>
     <div id="loading" class="active"></div>
 
-    <aside id="menu"  >
+    <aside id="menu" class="hide" >
   <div class="inner flex-row-vertical">
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
@@ -108,7 +108,7 @@
               </a>
             </li>
         
-            <li class=" active">
+            <li class="">
               <a href="/categories"  >
                 <i class="icon icon-lg icon-th-list"></i>
                 CATEGORIES
@@ -141,7 +141,7 @@
           <i class="icon icon-lg icon-navicon"></i>
         </a>
         <div class="flex-col header-title ellipsis">
-            <span>Categories: 前端</span>
+            <span>git</span>
             
         </div>
         
@@ -151,34 +151,24 @@
         
     </div>
 </header>
-<header class="content-header categories-header">
+<header class="content-header post-header">
     <img src="/img/banner.jpg" class="header-bg">
     <div class="container fade-scale">
-        <h1 class="title">Categories: 前端</h1>
+        <h1 class="title">git</h1>
         <h5 class="subtitle">
+            
+                <time datetime="2018-07-27T02:56:51.000Z" itemprop="datePublished" class="page-time">
+  2018-07-27
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端/">前端</a></li></ul>
+
             
         </h5>
         
     </div>
     
-<div class="tabs-bar container">
-    <nav class="tags-list">
-        <a href="/categories" style="-webkit-order:-1;order:-1" class="tags-list-item waves-effect waves-button waves-light
-            ">全部</a>
-        
-            <a href="/categories/前端/" backup-style="-webkit-order:0;order:0" class="tags-list-item waves-effect waves-button waves-light active">前端</a>
-            
-        
-            <a href="/categories/序/" backup-style="-webkit-order:1;order:1" class="tags-list-item waves-effect waves-button waves-light">序</a>
-            
-        
-    </nav>
-    <!-- PC show more-->
-    <div class="tags-list-more">
-        <a href="javascript:;" class="action tags-list-item waves-effect waves-circle waves-light"><i class="icon icon-ellipsis-h"></i></a>
-    </div>
-</div>
-
 
 </header>
 
@@ -195,76 +185,159 @@
     <div id="local-search-result"></div>
 </div>
 
-<div class="container body-wrap fade">
-    
-            <div class="waterfall">
-                
-                    <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2018-07-27 10:56:51" datetime="2018-07-27T02:56:51.000Z"  itemprop="datePublished">2018-07-27</time>
 
-      
+<div class="container body-wrap">
+    <article id="post-git"
+  class="post-article article-type-post" itemprop="blogPost">
+    <div class="post-card">
+        <h1 class="post-card-title">git</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-07-27 10:56:51" datetime="2018-07-27T02:56:51.000Z"  itemprop="datePublished">2018-07-27</time>
+
+            
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端/">前端</a></li></ul>
 
 
 
-    </div>
-    
+            
+	<span id="/2018/07/27/git/" class="leancloud_visitors" data-flag-title="git" title="git">
+		
+			<i class="icon icon-eye"></i>
+		
+		<span class="leancloud-visitors-count"></span>
+	</span>
+ 
+
+            
 
 
-  
-    <h3 class="post-title " itemprop="name">
-      <a class="post-title-link" href="/2018/07/27/git/">git</a>
-    </h3>
-  
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            
+            <p>在玩hexo的时候遇到的一点git使用技巧</p>
+<a id="more"></a>
+<h4 id="rm-rf-git"><a href="#rm-rf-git" class="headerlink" title="rm -rf .git"></a>rm -rf .git</h4><p>这条命令删除.git文件</p>
+<h4 id="git-push-origin-hexo"><a href="#git-push-origin-hexo" class="headerlink" title="git push origin hexo"></a>git push origin hexo</h4><p>本地分支需切换到与远程分支相同，push时指定远程分支</p>
+<h4 id="部署hexo时，如果想本地源码push上githubs上，-git不能删"><a href="#部署hexo时，如果想本地源码push上githubs上，-git不能删" class="headerlink" title="部署hexo时，如果想本地源码push上githubs上，.git不能删"></a>部署hexo时，如果想本地源码push上githubs上，.git不能删</h4><p>博客所有文件以及配置都在本机上，需要把本机上的所有文件以及配置都部署到在线仓库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 下面的仓库名和目录名都替换成自己的</span><br><span class="line">git clone https://github.com/xiaomingli/xiaomingli.github.git # 下载刚才复制的仓库地址(可能会让你输入coding.net的用户名和密码)</span><br><span class="line">cd xiaomingli.gitbub.io # 进入博客目录</span><br><span class="line">npm install # 安装依赖</span><br><span class="line">hexo clean # 清除缓存文件(非必须)</span><br><span class="line">hexo g # hexo generate的简写，生成静态文件</span><br><span class="line">hexo s # hexo server的简写，启动本机服务，预览博客（注：hexo g -d # hexo generate &amp; hexo deploy的简写）</span><br></pre></td></tr></table></figure></p>
 
-
-
-    
-    <div class="post-footer">
+        </div>
         
+<blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-07-27T03:30:20.743Z" itemprop="dateUpdated">2018-07-27 11:30:20</time>
+</span><br>
+
+
+        
+        转载注明出处，原文地址：<a href="/2018/07/27/git/" target="_blank" rel="external">https://xiaomingli.github.io/2018/07/27/git/</a>
+        
+    </div>
+    <footer>
+        <a href="https://xiaomingli.github.io">
+            <img src="/img/avatar.jpg" alt="春风猫儿">
+            春风猫儿
+        </a>
+    </footer>
+</blockquote>
+
+        
+            <div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+            
+        
+        <div class="post-footer">
+            
 	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
 
-    </div>
+            <div class="page-share-wrap">
     
-  </article>
-</div>
-                
-                    <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2017-04-15 09:56:12" datetime="2017-04-15T01:56:12.000Z"  itemprop="datePublished">2017-04-15</time>
 
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
       
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端/">前端</a></li></ul>
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://xiaomingli.github.io/2018/07/27/git/&title=《git》 — Spring Breeze Cat&pic=https://xiaomingli.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://xiaomingli.github.io/2018/07/27/git/&title=《git》 — Spring Breeze Cat&source=在玩hexo的时候遇到的一点git使用技巧" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      
+    </ul>
+ </div>
 
 
 
-    </div>
-    
-
-
-  
-    <h3 class="post-title " itemprop="name">
-      <a class="post-title-link" href="/2017/04/15/cookie/">Cookie操作</a>
-    </h3>
-  
-
-
-
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cookie/">Cookie</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-
-    </div>
-    
-  </article>
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
 </div>
-                
-            </div>
+
+        </div>
         
+            
+
+
+        
+    </div>
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="next">
+      <a href="/2017/04/15/cookie/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Cookie操作</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+    
+    
+        <aside class="post-widget">
+            <nav class="post-toc-wrap" id="post-toc">
+                <strong>目录</strong>
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#rm-rf-git"><span class="post-toc-number">1.</span> <span class="post-toc-text">rm -rf .git</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#git-push-origin-hexo"><span class="post-toc-number">2.</span> <span class="post-toc-text">git push origin hexo</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#部署hexo时，如果想本地源码push上githubs上，-git不能删"><span class="post-toc-number">3.</span> <span class="post-toc-text">部署hexo时，如果想本地源码push上githubs上，.git不能删</span></a></li></ol>
+            </nav>
+            <div class="toc-bar"><div>
+        </aside>
+    
+</article>
+
+    <div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        我们一起来让这个世界有趣一点
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+    </div>
+</div>
+
     
 </div>
 
@@ -304,7 +377,7 @@
     <ul class="reset share-icons">
       
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://xiaomingli.github.io/categories/前端/&title=Spring Breeze Cat&pic=https://xiaomingli.github.io/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://xiaomingli.github.io/2018/07/27/git/&title=《git》 — Spring Breeze Cat&pic=https://xiaomingli.github.io/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -316,7 +389,7 @@
       </li>
       
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://xiaomingli.github.io/categories/前端/&title=Spring Breeze Cat&source=Hard work, not to be hard to live in" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://xiaomingli.github.io/2018/07/27/git/&title=《git》 — Spring Breeze Cat&source=在玩hexo的时候遇到的一点git使用技巧" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -328,7 +401,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMUlEQVR42u3aQXLDIAwF0Nz/0u6mi3RSu19S0jbwWHVcAjxnRgGk2y1ux127f/L437Oe90+ux3zs+bSGgYHxtozjsiVTnn3qDNyb93oWDAyMHRhnEeysTzL9ZLn52jAwMDCqffIQXA3QGBgYGJOAm4xTPdxiYGBg9A6x10H2r0bDwMDYgZHfuv/+3y/Jb2BgYLwV4yi2eUh97no+R8bAwFiakU9TXWieKuixMTAw9mHkF/f50THv37uA++YJBgbG9ozqUXYSsvPt5pcnGBgYSzPya/pqeUTv5i8JtRgYGLsxrhedbBbzcFzdCBZmwcDA2IDRuxqrYpLXkVMLdWcYGBhLMJLja68Uo3r07SUYMDAwdmBMDqjzAJpvSaMUJgYGxnKMZJdVDaPJK8gTnL3kKAYGxnqMaklE7yhb3faVEwYYGBhLM6pbwGracpIkGH0nGBgYSzB6xVi9YD0Z54efAQwMjKUZk9Rjr8CiGqyrSQgMDIxVGddbunzb17smm5R6FG4KMTAwlmDMyyCuEwCTC7ioXAMDA2MbRrWcIk9w5ofYXmkaBgbGDoz8sJq/iF4iIV8tBgbGDoyj2CZXbJMQH30PGBgYizLm28ceMrnmy9MVGBgYOzAmi+stMU8VFEo0MDAwNmBUqzMmoXZSFnaKxMDAwIj75E+SMo486GNgYGD0JssDa3Wz+JKAi4GB8e8Z1UKuvJisOk6yocTAwNiNMam56l3lV1/K05KaGBgY78f4AOtKN/W+R1jHAAAAAElFTkSuQmCC" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLUlEQVR42u3aOXLDMAwFUN//0k6bzETyB0AXIp8qj00tTwWMha9XfLwvjmT972+SNfdXHh0YGBiPZbxvj1Xv6R6W3PfDS8TAwDiAcXXj+3B5/0DVqJiE6cvvMTAwMMaf82CNgYGB8Q1GnlBWgywGBgZG79L3YfR+ZfLr12txDAyMBzIm6dq3P39lvoGBgfEoxrt4zMcJq5pxf66DgYGxNSMPcHly1it3k6L6Q2KKgYGxNSN5lDwEJ4VrclZSGJfzWQwMjO0YeeOsyqteszkWxcDA2ILRO3ntRrFeYMXAwDiNUd2SVU0f89dUHXm+qm8UAwPjsYxJYjdpkOVX+3AWBgbGAYzeY+XhMgmavTtepoYYGBhbM/KhY7Vxlg9H82CNgYFxAqPaUOsF3KQB12y05d0+DAyMxzJGG0aLDf1JgliYuGJgYGzKWDueTAJllOrFowgMDIwTGNWmWA/cK1+jxBQDA+MARnVrRRIie8E0OesfPAYGxtaMaimb3DJfmYOjBBQDA+MARm8YsGq0ma+5/BvAwMA4gHEf7HqbKvIBQ4+EgYGBUZ0Y5iOEBS22efcOAwPjIYz5NoveeGBSEi/YM4KBgfEoRjXMVRth1ZFnvsurGbIxMDAey8iHAWvXTzZhYGBgnMmYF6vz5lo19GNgYGDMB5OTojQJuFE7EQMD40hGdcyZt+cmA04MDIwTGElR2kv1eiXrgs0WGBgYGzF6WxzK7bD41yoVAwNja8YPB2BBz2zHnkgAAAAASUVORK5CYII=" alt="微信分享二维码">
 </div>
 
 

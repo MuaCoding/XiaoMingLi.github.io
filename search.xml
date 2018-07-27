@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[git]]></title>
+    <url>%2F2018%2F07%2F27%2Fgit%2F</url>
+    <content type="text"><![CDATA[在玩hexo的时候遇到的一点git使用技巧 rm -rf .git这条命令删除.git文件 git push origin hexo本地分支需切换到与远程分支相同，push时指定远程分支 部署hexo时，如果想本地源码push上githubs上，.git不能删博客所有文件以及配置都在本机上，需要把本机上的所有文件以及配置都部署到在线仓库1234567# 下面的仓库名和目录名都替换成自己的git clone https://github.com/xiaomingli/xiaomingli.github.git # 下载刚才复制的仓库地址(可能会让你输入coding.net的用户名和密码)cd xiaomingli.gitbub.io # 进入博客目录npm install # 安装依赖hexo clean # 清除缓存文件(非必须)hexo g # hexo generate的简写，生成静态文件hexo s # hexo server的简写，启动本机服务，预览博客（注：hexo g -d # hexo generate &amp; hexo deploy的简写）]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Cookie操作]]></title>
     <url>%2F2017%2F04%2F15%2Fcookie%2F</url>
     <content type="text"><![CDATA[在PC项目实战中，需要进行对站点的选择，将用户选择的站点保存在Cookie当中，设置cookie时一直没能成功。 下面来说重点！如何设置，获取，删除cookie 保存Cookie123456789 //参数 name: 自定义Cookie名字 value：给Cookie设置值 expired: 设置Cookie保存多长时间 path: 将Cookie保存的位置（根据项目的文件目录，asp.net默认为/，就是根目录） domain: 表示的是cookie所在的域，默认为请求的地址，如网址为www.cookie.com/cookie/cookie.aspx，那么domain默认为www.test.comfunction setCookie(name, value, expired, path, domain) &#123; var d = new Date(); d.setTime(d.getTime() + (expired * 24 * 60 * 60 * 1000)); var expires = &quot;expires=&quot; + d.toUTCString(); document.cookie = name + &quot;=&quot; + value + &quot;; &quot; + expires + &quot;;path=/;domain=&quot; + location.hostname;&#125;; 获取Cookie参数 name : 自定义Cookie名字12345678910function getCookie(objName) &#123;//获取指定名称的cookie的值 var name = objName + &quot;=&quot;; var value = document.cookie.split(&apos;;&apos;); for (var i = 0; i &lt; value.length; i++) &#123; var key = value[i]; while (key.charAt(0) == &apos; &apos;) key = key.substring(1); if (key.indexOf(name) != -1) return key.substring(name.length, key.length); &#125; return &quot;&quot;;&#125;; 删除Cookie123function delCookie(name) &#123;//为了删除指定名称的cookie，可以将其过期时间设定为一个过去的时间，或者将Cookie值设置为空 setCookie(name, &quot;&quot;, -1);&#125; 好了，Cookie的基本的方法基本就是这样。当然在项目中运用这些方法之前，我也是踩了许多坑，比如，保存不成功，在做登陆的时候，获取Cookie值时，就遇到登陆后返回的token值保存在浏览器，获取保存在浏览器的token值时，值发生变化。好了，去搬砖了。]]></content>
@@ -15,7 +27,7 @@
   <entry>
     <title><![CDATA[Nagging]]></title>
     <url>%2F2017%2F03%2F15%2Fhello%2F</url>
-    <content type="text"><![CDATA[这是一个开始。一直在捉摸着如何搭建一个博客,一直都没成功。在工作快一年之后，解决问题的能力有所提高，才再次把这个事情提上日程。]]></content>
+    <content type="text"><![CDATA[这是一个开始。记录学习的脚印。]]></content>
       <categories>
         <category>序</category>
       </categories>
