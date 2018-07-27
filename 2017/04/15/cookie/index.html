@@ -215,10 +215,10 @@
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
             
-            <p>在PC项目实战中，需要进行对站点的选择，将用户选择的站点保存在Cookie当中，设置cookie时一直成功。</p>
-<p>下面来说重点！直接上代码</p>
-<h5 id="保存Cookie"><a href="#保存Cookie" class="headerlink" title="保存Cookie"></a>保存Cookie</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">//参数 name: 自定义Cookie名字  value：给Cookie设置值  expired: 设置Cookie保存多长时间  path: 将Cookie保存的位置（根据项目的文件目录，asp.net默认为/，就是根目录）  domain: 表示的是cookie所在的域，默认为请求的地址，如网址为www.cookie.com/cookie/cookie.aspx，那么domain默认为www.test.com</span><br><span class="line"></span><br><span class="line">function setCookie(name, value, expired, path, domain) &#123;</span><br><span class="line">  var d = new Date();</span><br><span class="line">  d.setTime(d.getTime() + (expired * 24 * 60 * 60 * 1000));</span><br><span class="line">  var expires = &quot;expires=&quot; + d.toUTCString();</span><br><span class="line">  document.cookie = name + &quot;=&quot; + value + &quot;; &quot; + expires + &quot;;path=/;domain=&quot; + location.hostname;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+            <p>在PC项目实战中，需要进行对站点的选择，将用户选择的站点保存在Cookie当中，设置cookie时一直没能成功。</p>
+<p>下面来说重点！如何设置，获取，删除cookie</p>
 <a id="more"></a>
+<h5 id="保存Cookie"><a href="#保存Cookie" class="headerlink" title="保存Cookie"></a>保存Cookie</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">//参数 name: 自定义Cookie名字  value：给Cookie设置值  expired: 设置Cookie保存多长时间  path: 将Cookie保存的位置（根据项目的文件目录，asp.net默认为/，就是根目录）  domain: 表示的是cookie所在的域，默认为请求的地址，如网址为www.cookie.com/cookie/cookie.aspx，那么domain默认为www.test.com</span><br><span class="line"></span><br><span class="line">function setCookie(name, value, expired, path, domain) &#123;</span><br><span class="line">  var d = new Date();</span><br><span class="line">  d.setTime(d.getTime() + (expired * 24 * 60 * 60 * 1000));</span><br><span class="line">  var expires = &quot;expires=&quot; + d.toUTCString();</span><br><span class="line">  document.cookie = name + &quot;=&quot; + value + &quot;; &quot; + expires + &quot;;path=/;domain=&quot; + location.hostname;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <h5 id="获取Cookie"><a href="#获取Cookie" class="headerlink" title="获取Cookie"></a>获取Cookie</h5><p>参数 name : 自定义Cookie名字<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function getCookie(objName) &#123;//获取指定名称的cookie的值 </span><br><span class="line">  var name = objName + &quot;=&quot;;</span><br><span class="line">  var value = document.cookie.split(&apos;;&apos;);</span><br><span class="line">  for (var i = 0; i &lt; value.length; i++) &#123;</span><br><span class="line">    var key = value[i];</span><br><span class="line">    while (key.charAt(0) == &apos; &apos;) key = key.substring(1);</span><br><span class="line">    if (key.indexOf(name) != -1) return key.substring(name.length, key.length);</span><br><span class="line">  &#125;</span><br><span class="line">  return &quot;&quot;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
 <h5 id="删除Cookie"><a href="#删除Cookie" class="headerlink" title="删除Cookie"></a>删除Cookie</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function delCookie(name) &#123;//为了删除指定名称的cookie，可以将其过期时间设定为一个过去的时间，或者将Cookie值设置为空 </span><br><span class="line">  setCookie(name, &quot;&quot;, -1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>好了，Cookie的基本的方法基本就是这样。当然在项目中运用这些方法之前，我也是踩了许多坑，比如，保存不成功，在做登陆的时候，获取Cookie值时，就遇到登陆后返回的token值保存在浏览器，获取保存在浏览器的token值时，值发生变化。好了，去搬砖了。</p>
@@ -229,7 +229,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-07-26T07:37:41.087Z" itemprop="dateUpdated">2018-07-26 15:37:41</time>
+    Last updated: <time datetime="2018-07-27T02:47:46.295Z" itemprop="dateUpdated">2018-07-27 10:47:46</time>
 </span><br>
 
 
@@ -275,9 +275,8 @@
       </li>
       
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://xiaomingli.github.io/2017/04/15/cookie/&title=《Cookie操作》 — Spring Breeze Cat&source=在PC项目实战中，需要进行对站点的选择，将用户选择的站点保存在Cookie当中，设置cookie时一直成功。
-下面来说重点！直接上代码
-保存Cookie1..." data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://xiaomingli.github.io/2017/04/15/cookie/&title=《Cookie操作》 — Spring Breeze Cat&source=在PC项目实战中，需要进行对站点的选择，将用户选择的站点保存在Cookie当中，设置cookie时一直没能成功。
+下面来说重点！如何设置，获取，删除coo..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -300,14 +299,7 @@
         
     </div>
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="prev">
-      <a href="/2017/09/27/create-webapp-problems-encountered/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">webapp实现出现的滚动问题</h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
   
@@ -392,9 +384,8 @@
       </li>
       
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://xiaomingli.github.io/2017/04/15/cookie/&title=《Cookie操作》 — Spring Breeze Cat&source=在PC项目实战中，需要进行对站点的选择，将用户选择的站点保存在Cookie当中，设置cookie时一直成功。
-下面来说重点！直接上代码
-保存Cookie1..." data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://xiaomingli.github.io/2017/04/15/cookie/&title=《Cookie操作》 — Spring Breeze Cat&source=在PC项目实战中，需要进行对站点的选择，将用户选择的站点保存在Cookie当中，设置cookie时一直没能成功。
+下面来说重点！如何设置，获取，删除coo..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>

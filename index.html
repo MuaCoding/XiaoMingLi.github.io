@@ -187,85 +187,6 @@
         <ul class="post-list">
         
             <li class="post-list-item fade">
-                <article id="post-create-webapp-problems-encountered"
-  class="article-card article-type-post" itemprop="blogPost">
-  
-        
-<div class="item-thumb">
-    <a class="thumb-link" href="/2017/09/27/create-webapp-problems-encountered/"></a>
-    <div class="thumb-hover">
-        <span class="icon icon-eye"></span>
-    </div>
-    <img src="/img/thumb/3.jpg" alt="图片路径不正确">
-    
-
-
-  
-    <h3 class="post-title ab-title" itemprop="name">
-      <a class="post-title-link" href="/2017/09/27/create-webapp-problems-encountered/">webapp实现出现的滚动问题</a>
-    </h3>
-  
-
-
-
-</div>
-
-        
-    
-    
-    
-    <div class="post-meta">
-        <time class="post-time" title="2017-09-27 20:54:48" datetime="2017-09-27T12:54:48.000Z"  itemprop="datePublished">2017-09-27</time>
-
-        
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端/">前端</a></li></ul>
-
-
-
-        
-	<span id="/2017/09/27/create-webapp-problems-encountered/" class="leancloud_visitors" data-flag-title="webapp实现出现的滚动问题" title="webapp实现出现的滚动问题">
-		
-			<i class="icon icon-eye"></i>
-		
-		<span class="leancloud-visitors-count"></span>
-	</span>
- 
-
-        
-
-
-        
-        
-    </div>
-    
-    <div class="post-content" id="post-content" itemprop="postContent">
-    
-    
-        <h4 id="运用ionic-angularjs实现webapp。"><a href="#运用ionic-angularjs实现webapp。" class="headerlink" title="运用ionic+angularjs实现webapp。"></a>运用ionic+angularjs实现webapp。</h4><p>在用标签<ion-popover-view></ion-popover-view>实现内容的滚动时，这里出现了问题，内容超出模态框滚动时内容没有隐藏，当然模态框最外层div中并未使用overflow：hidden，因为商品图片需上凸起，所以这里并没有使用overflow：hidden，一开始代码是这样的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;ion-content&gt;</span><br><span class="line">    &lt;div class=&quot;fourth-cover&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;prop&quot;&gt;</span><br><span class="line">            &lt;header class=&quot;prop-header&quot;&gt;</span><br><span class="line">                &lt;span&gt;批价&lt;/span&gt;</span><br><span class="line">            &lt;/header&gt;</span><br><span class="line">            &lt;ul class=&quot;clearfix&quot;&gt;</span><br><span class="line">                &lt;li class=&quot;active&quot;&gt;</span><br><span class="line">                    &lt;p&gt;&lt;span ng-bind=&quot;&apos;≥&apos;+detail[0].priceScopeTitle1&quot;&gt;0&lt;/span&gt;&lt;span ng-bind=&quot;detail[0].unit&quot;&gt;&lt;/span&gt;&lt;/p&gt;</span><br><span class="line">                    &lt;p ng-bind=&quot;detail[0].price1 | currency : &apos;￥&apos;&quot;&gt;￥0&lt;/p&gt;</span><br><span class="line">                    &lt;i class=&quot;icon-select&quot;&gt;&lt;/i&gt;</span><br><span class="line">                &lt;/li&gt;</span><br><span class="line">                &lt;li&gt;</span><br><span class="line">                    &lt;p&gt;&lt;span ng-bind=&quot;&apos;≥&apos;+detail[0].priceScopeTitle2&quot;&gt;0&lt;/span&gt;&lt;span ng-bind=&quot;detail[0].unit&quot;&gt;&lt;/span&gt;&lt;/p&gt;</span><br><span class="line">                    &lt;p ng-bind=&quot;detail[0].price2 | currency : &apos;￥&apos;&quot;&gt;￥0&lt;/p&gt;</span><br><span class="line">                    &lt;i class=&quot;icon-select&quot;&gt;&lt;/i&gt;</span><br><span class="line">                &lt;/li&gt;</span><br><span class="line">                &lt;li&gt;</span><br><span class="line">                    &lt;p&gt;&lt;span ng-bind=&quot;&apos;≥&apos;+detail[0].priceScopeTitle3&quot;&gt;0&lt;/span&gt;&lt;span ng-bind=&quot;detail[0].unit&quot;&gt;&lt;/span&gt;&lt;/p&gt;</span><br><span class="line">                    &lt;p ng-bind=&quot;detail[0].price3 | currency : &apos;￥&apos;&quot;&gt;￥0&lt;/p&gt;</span><br><span class="line">                &lt;/li&gt;</span><br><span class="line">            &lt;/ul&gt;</span><br><span class="line">        &lt;/div&gt;   </span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/ion-content&gt;</span><br></pre></td></tr></table></figure>
-<p>需要实现效果如下：</p>
-<figure class="image-box">
-                <img src="/2017/09/27/create-webapp-problems-encountered/webapp-1.jpg" alt="" title="" class="index-item-img">
-                <p></p>
-            </figure>
-<p class="text-center">实现效果</p>
-    
-    <a href="/2017/09/27/create-webapp-problems-encountered/" class="post-more waves-effect waves-button">
-        more
-    </a>
-    </div>
-</article>
-
-<div class="post-footer">
-    
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ionic/">Ionic</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-
-</div>
-
-
-            </li>
-        
-            <li class="post-list-item fade">
                 <article id="post-cookie"
   class="article-card article-type-post" itemprop="blogPost">
   
@@ -320,9 +241,8 @@
     <div class="post-content" id="post-content" itemprop="postContent">
     
     
-        <p>在PC项目实战中，需要进行对站点的选择，将用户选择的站点保存在Cookie当中，设置cookie时一直成功。</p>
-<p>下面来说重点！直接上代码</p>
-<h5 id="保存Cookie"><a href="#保存Cookie" class="headerlink" title="保存Cookie"></a>保存Cookie</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">//参数 name: 自定义Cookie名字  value：给Cookie设置值  expired: 设置Cookie保存多长时间  path: 将Cookie保存的位置（根据项目的文件目录，asp.net默认为/，就是根目录）  domain: 表示的是cookie所在的域，默认为请求的地址，如网址为www.cookie.com/cookie/cookie.aspx，那么domain默认为www.test.com</span><br><span class="line"></span><br><span class="line">function setCookie(name, value, expired, path, domain) &#123;</span><br><span class="line">  var d = new Date();</span><br><span class="line">  d.setTime(d.getTime() + (expired * 24 * 60 * 60 * 1000));</span><br><span class="line">  var expires = &quot;expires=&quot; + d.toUTCString();</span><br><span class="line">  document.cookie = name + &quot;=&quot; + value + &quot;; &quot; + expires + &quot;;path=/;domain=&quot; + location.hostname;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+        <p>在PC项目实战中，需要进行对站点的选择，将用户选择的站点保存在Cookie当中，设置cookie时一直没能成功。</p>
+<p>下面来说重点！如何设置，获取，删除cookie</p>
     
     <a href="/2017/04/15/cookie/" class="post-more waves-effect waves-button">
         more
