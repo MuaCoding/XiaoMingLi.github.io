@@ -3,19 +3,19 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: XiaoMing's Notes
+title: Spring Breeze Cat
 subtitle: Quick notes
-description: 努力，不被生活难住
-author: XiaoMing
+description: Hard work, not to be hard to live in
+author: 春风猫儿
 language: zh-Hans
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://xiaomingli.github.io
 root: /
 permalink: :year/:month/:day/:title/
-permalink_defaults:
+permalink_defaults: https://xiaomingli.github.io
 
 # Directory
 source_dir: source
@@ -28,7 +28,7 @@ i18n_dir: :lang
 skip_render:
 
 # Writing
-new_post_name: :title.md # File name of new posts
+new_post_name: :year-:month-:day-:title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
@@ -63,7 +63,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: mellow
 
 #sidebar
 sidebar: 

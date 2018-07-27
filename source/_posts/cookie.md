@@ -1,14 +1,17 @@
 ---
-title: 如何设置Cookie,获取Cookie,删除Cookie
+title: Cookie操作
 date: 2017-04-15 09:56:12
-tags: [JavaScript]
-categories: JavaScript
+tags: 
+- 前端
+- Cookie
+categories: 
+- 前端
 ---
-在这个月的PC项目实战中，需要进行对站点的选择，将用户选择的站点保存在Cookie当中以及
+在PC项目实战中，需要进行对站点的选择，将用户选择的站点保存在Cookie当中，设置cookie时一直没能成功。
 
-我是在项目一开始就遇到问题，设置cookie时一直没保存成功，我是刚毕业不到一年的前端菜鸟，快毕业才入的坑，前端三剑客还处在迷迷糊糊的状态当中。
+下面来说重点！如何设置，获取，删除cookie
 
-下面来说重点！直接上代码
+<!-- more -->
 
 ##### 保存Cookie
 
@@ -24,7 +27,6 @@ function setCookie(name, value, expired, path, domain) {
 };
 
 ```
-<!-- more -->
 
 ##### 获取Cookie
 
