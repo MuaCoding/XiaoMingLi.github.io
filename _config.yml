@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Spring Breeze Cat
+title: XiaoMing's blog
 subtitle: Quick notes
 description: Hard work, not to be hard to live in
-author: 春风猫儿
+author: XiaoMing
 language: zh-Hans
 timezone:
 
@@ -66,7 +66,7 @@ pagination_dir: page
 theme: mellow
 
 #sidebar
-sidebar: 
+sidebar:
 	position: left
 	display: hide
 # Deployment
